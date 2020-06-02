@@ -1,0 +1,1028 @@
+@import "vars"
+@import "libs"
+@import "fonts"
+
+/*  ---  Мои стили для проекта  ---  */
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html
+  overflow-x: hidden
+  box-sizing: border-box
+
+*, ::before, ::after
+  box-sizing: inherit
+  
+body
+  position: relative
+  min-width: 320px
+  overflow: hidden
+  font-family: $font-default
+  font-size: 16px
+  line-height: 1.4
+  color: $text
+  
+  input, textarea
+    border: #666 1px solid
+    outline: none
+
+p
+  margin: 0 
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+b, strong
+  font-weight: bold
+
+.btn-wrap
+  position: relative
+  width: 290px
+  margin: 0 auto
+
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: darken($accent, 10%)
+    box-shadow: 0 10px 30px 3px $accent
+    border-radius: 40px
+    transform: translateY(4px)
+
+.btn
+  position: relative
+  width: 100%
+  padding: 25px 40px
+  font-size: 20px
+  font-weight: 500
+  color: #ffffff
+  text-transform: uppercase
+  background-color: $accent
+  border: none
+  border-radius: 40px
+  transition: $slowdown
+  cursor: pointer
+  
+  &:hover
+    color: #ffffff
+    text-decoration: none
+    background-color: lighten($accent, 5%)
+  
+  &:active
+    transform: translateY(4px)
+
+.link-btn
+  display: block
+  width: 250px
+  margin: 0 auto
+  
+  &:hover
+    color: #ffffff
+    text-decoration: none
+  
+.no-btn
+  padding: 0
+  background: none
+  border: none
+  &:active, &:focus
+    outline: none
+  
+.lst
+  margin: 0
+  padding: 0
+  list-style: none
+  
+h1, h2, h3
+  margin: 0.4em 0
+  font-family: $font-accent
+  line-height: 1.2
+
+.title-text
+  position: relative
+  z-index: 1
+  margin-top: 0
+  margin-bottom: 0
+  font-size: 30px
+  font-weight: 400
+  text-align: center
+  text-transform: uppercase
+  line-height: 1.2
+
+  &__number
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: -1
+    font-family: $font-accent
+    font-size: 200px
+    color: rgba(255, 255, 255,.99)
+    line-height: 1
+    transform: translate(-50%, -58%)
+
+    &_accent
+      text-shadow: $accent 1px 1px 0, $accent -1px -1px 0, $accent -1px 1px 0, $accent 1px -1px 0
+    &_pink
+      text-shadow: #ffdae9 1px 1px 0, #ffdae9 -1px -1px 0, #ffdae9 -1px 1px 0, #ffdae9 1px -1px 0
+    &_white
+      color: #79aeb8
+      text-shadow: #ffffff 1px 1px 0, #ffffff -1px -1px 0, #ffffff -1px 1px 0, #ffffff 1px -1px 0
+    &_bg-pink
+        color: #ffebf3
+
+.text-accent
+  color: $accent
+
+.text-black
+  font-weight: 900
+
+.text-up
+  text-transform: uppercase
+  
+.text-nowrap
+  white-space: nowrap
+
+/* grids */
+.container
+  position: relative
+  width: 1200px
+  margin: 0 auto
+  padding: 0 15px
+
+.row
+  display: flex
+  justify-content: space-between
+
+/* wrappers */
+.wrapper-top
+  position: relative
+  padding-bottom: 240px
+  background: #E0E4EA
+  background: linear-gradient(to bottom right, #e0e4ea, #a5abb4)
+  
+  &__image
+    position: absolute
+
+    &_points
+      left: 50%
+      top: 0
+      width: 100%
+      height: 100%
+      background-image: url(../img/points_new.png)
+      background-repeat: no-repeat
+      background-position: center top
+      background-size: contain
+      transform: translateX(-50%)
+
+    &_woman
+      bottom: 10%
+      right: 50%
+      width: 900px
+      transform: translateX(75%)
+      
+    &_flowers 
+      right: 50%
+      bottom: -58%
+      width: 880px
+      height: 950px
+      background-image: url(../img/flowers-top.png)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      transform: translateX(-20%)
+
+  &__circle
+    position: absolute
+    z-index: 1
+    height: 90px
+    width: 90px
+    background-color: #ffdeac
+    border-radius: 50%
+    opacity: 0.6
+
+    &_1
+      right: 15%
+      bottom: 40%
+
+    &_2
+      right: 53%
+      bottom: 20%
+
+
+/* header */
+.header
+  &__line
+    position: relative
+    z-index: 10
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 150px
+    width: 50%
+
+  &__logo
+    width: 200px
+
+/* top */
+.top
+
+  &__wrap
+    position: relative
+    width: 50%
+    margin-top: 40px
+    text-align: center
+
+  &__block
+    position: relative
+    z-index: 1
+    
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: -1
+      width: 50%
+      height: 0
+      box-shadow: 0 0 160px 120px #fdfcfa
+      transform: translate(-50%, -50%)
+
+  &__subtitle
+    font-size: 18px
+    font-weight: 500
+    color: #4d1904
+    letter-spacing: 1px
+
+  &__title
+    font-size: 36px
+    font-weight: 400
+    color: $accent
+    text-transform: uppercase
+    line-height: 1.2
+
+  &__price
+    margin-bottom: 20px
+    font-size: 24px
+    font-weight: 500
+    color: #4d1904
+
+  &__text
+    position: relative
+    z-index: 10
+    font-weight: 400
+    color: #484848
+
+    &_action
+      font-size: 18px
+      font-weight: 500
+      color: #4d1904
+
+  &__btn-wrap
+    position: relative
+    min-width: 290px
+    margin-top: 30px
+    margin-bottom: 40px
+
+.price
+  &_old
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      width: 100%
+      height: 3px
+      background-color: $accent
+      border-radius: 2px
+      transform: translateY(-50%) rotate(-10deg)
+  
+  &_new
+    font-weight: 900
+    color: $accent
+    animation-duration: 2s
+    animation-delay: 2s
+    animation-iteration-count: infinite
+
+  &_accent
+    animation-duration: 2s
+    animation-delay: 2s
+    animation-iteration-count: infinite
+
+/* promo */
+.promo
+  position: relative
+  margin-top: -30px
+  background-color: transparent
+  
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    height: 200%
+    clip-path: polygon(0% 25%, 100% 0, 100% 75%, 0 100%)
+    background-color: #faf8f4
+    transform: translateY(-50%)
+
+  &__wrap
+    position: relative
+    width: 50%
+
+    &_left
+      
+    &_right
+      padding-right: 30px
+      color: #383838
+
+  &__image
+
+    &_left
+      position: absolute
+      left: 50%
+      top: 100px
+      width: 380px
+      transform: translateX(-50%)
+
+    &_right
+      display: none
+
+  &__text
+    position: relative
+    z-index: 1
+    margin-bottom: 40px
+    font-size: 18px
+    font-weight: 500
+
+  &__number
+    position: absolute
+    top: 50%
+    left: -40px
+    z-index: -1
+    font-family: $font-accent
+    font-size: 200px
+    color: rgba(255, 255, 255,.99)
+    text-shadow: $accent 1px 1px 0, $accent -1px -1px 0, $accent -1px 1px 0, $accent 1px -1px 0
+    transform: translateY(-50%)
+
+  &__title
+    margin-bottom: 40px
+    font-family: $font-accent
+    font-size: 28px
+    font-weight: 400
+
+  &__price
+    margin-bottom: 30px
+    font-size: 24px
+    font-weight: 500
+    line-height: 1.2
+
+  &__btn-wrap
+    z-index: 10
+    margin-left: 0
+
+
+/* set */
+@keyframes zoom-flowers-set
+  0%
+    transform: translateX(100%) rotateY(180deg) scale(0.9)
+
+  50%
+    transform: translateX(100%) rotateY(180deg) scale(1)
+
+  100%
+    transform: translateX(100%) rotateY(180deg) scale(0.9)
+
+
+.set
+  padding-top: 200px
+
+  &__bg-img
+    position: absolute
+    right: 50%
+    top: -65%
+    width: 100%
+    height: 100%
+    background-image: url(../img/flowers.png)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    transform: translateX(100%) rotateY(180deg)
+    animation-name: zoom-flowers-set
+    animation-duration: 4s
+    animation-iteration-count: infinite
+    animation-play-state: running
+    animation-timing-function: easy-in-out
+
+  &__list
+    display: flex
+    justify-content: space-between
+    margin-top: 60px
+
+  &__item
+    width: 270px
+    margin-bottom: 30px
+
+    &:nth-child(2)
+      margin-top: 55px
+      
+    &:nth-child(3)
+      margin-top: 110px
+
+    &:nth-child(4)
+      margin-top: 165px
+
+  &__title
+    position: relative
+    padding: 15px 0
+
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 15px
+      height: 2px
+      background-color: #d0af6d
+
+
+/* signs */
+.signs
+  position: relative
+  margin-top: -160px
+  padding-top: 200px
+  padding-bottom: 150px
+  background-color: #79aeb8 
+  background-image: url(../img/flowers-bg.png)
+  background-repeat: no-repeat
+  background-position: center bottom
+  background-size: 1200px
+  background-attachment: fixed
+  clip-path: polygon(0% 0%, 100% 250px, 100% 100%, 0 calc(100% - 250px))
+
+  .title-text
+    font-weight: 700
+    
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-top: 120px
+
+  &__item
+    position: relative
+    width: 265px
+    min-height: 140px
+    margin: 0 25px
+    margin-bottom: 110px
+    padding: 25px
+    padding-top: 65px
+    padding-bottom: 30px
+    background-color: #ffffff
+    box-shadow: 0 15px 30px 10px rgba(0,0,0,0.2)
+
+  &__number
+    position: absolute
+    top: -32px
+    left: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 75px
+    height: 75px
+    font-size: 24px
+    font-weight: 900
+    color: #ffffff
+    background-color: $accent
+    border-radius: 50%
+    transform: translateX(-50%)
+
+  &__title
+    font-size: 18px
+    font-weight: 500
+    text-align: center
+    line-height: 1.2
+
+
+/* sign-up */
+.sign-up
+  margin-top: -50px
+
+  &__wrap
+    text-align: center
+
+  &__text
+    margin-bottom: 40px
+    font-family: $font-accent
+    font-size: 28px
+    color: $accent
+    line-height: 1.2
+
+  &__price
+    margin-bottom: 30px
+    font-size: 24px
+    font-weight: 500
+    line-height: 1.2
+
+
+/* specialists */
+.specialists
+  padding-top: 120px
+
+  &__list
+    display: flex
+    justify-content: space-between
+    margin-top: 80px
+    margin-bottom: 30px
+
+  &__item
+    width: 220px
+    margin: 0 auto
+    margin-bottom: 30px
+    padding: 30px
+    box-sizing: border-box
+    background-color: #dcf4f8
+
+  &__image
+    width: 100%
+    overflow: hidden
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 20px
+    text-align: center
+    line-height: 1.2
+
+  &__name
+    margin-top: 0
+    margin-bottom: 15px
+    font-weight: 700
+    text-transform: uppercase
+
+  &__profi
+    min-height: 40px
+
+  &__description
+    font-style: italic
+
+  .swiper
+    &-container
+      padding-top: 80px
+
+    &-wrapper
+      margin-bottom: 30px
+
+    &-button-next, &-button-prev
+      display: none
+      top: auto
+      bottom: 50px
+      width: 40px
+      height: 40px
+      transition: $slowdown
+
+      &::after
+        display: none
+
+      svg
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 40px
+        height: 40px
+        fill: $accent
+        transform: translate(-50%, -50%)
+
+    &-button-prev
+      svg
+        transform: translate(-50%, -50%) rotate(180deg)
+
+/* centre */
+@keyframes zoom-flowers
+  0%
+    transform: translateX(-100%) scale(0.9)
+  50%
+    transform: translateX(-100%) scale(1)
+  100%
+    transform: translateX(-100%) scale(0.9)
+
+.centre
+  &__bg-img
+    position: absolute
+    left: 60%
+    bottom: -30%
+    z-index: 1
+    width: 100%
+    height: 100%
+    background-image: url(../img/flowers.png)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    transform: translateX(-100%)
+    animation-name: zoom-flowers
+    animation-duration: 4s
+    animation-iteration-count: infinite
+    animation-play-state: running
+    animation-timing-function: easy-in-out
+
+  &__wrap
+    position: relative
+    width: 80%
+    margin: 0 auto
+    padding-bottom: 70px
+    padding-top: 80px
+    background-color: #ffebf3
+
+  &__list
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    max-width: 500px
+    margin: 0 auto
+    margin-top: 80px
+    text-align: center
+
+  &__item
+    margin-bottom: 25px
+    font-size: 18px
+    font-weight: 500
+    line-height: 1.2
+
+    &::before
+      content: '-'
+      padding-right: 4px
+      
+    &_gold
+      color: #d0af6d
+
+  &__btn-wrap
+    position: absolute
+    bottom: -35px
+    left: 50%
+    z-index: 10
+    transform: translateX(-50%)
+
+
+/* reviews */
+.reviews
+  margin-bottom: -130px
+  padding-top: 150px
+
+  &__wrap
+
+  &__item
+    width: 760px
+    min-height: 260px
+    margin: 0 auto
+    margin-top: 100px
+    padding: 60px 50px
+    padding-top: 100px
+    border: 2px solid #ffebf3
+    transform: rotate(-10deg)
+
+  &__inner
+    display: flex
+    min-height: 100%
+    transform: rotate(10deg)
+
+  &__image
+    width: 130px
+    height: 130px
+    overflow: hidden
+    border-radius: 50%
+    box-shadow: 0 5px 20px 5px rgba(#d0b06f, 0.5)
+
+  &__content
+    width: 75%
+    margin-left: 20px
+    padding-top: 20px
+
+  &__text
+    margin-bottom: 25px
+    font-size: 18px
+    font-weight: 500
+    line-height: 1.2
+
+  &__author
+    font-size: 18px
+    font-weight: 700
+
+  &__age
+    font-weight: 400
+    font-style: italic
+
+  .swiper
+    &-wrapper
+      margin-bottom: 80px
+
+    &-button-next, &-button-prev
+      display: block
+      top: auto
+      bottom: auto
+      width: 45px
+      height: 45px
+      background-color: $accent
+      border-radius: 50%
+      transition: $slowdown
+
+      &::after
+        display: none
+
+      svg
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 16px
+        height: 16px
+        fill:#ffffff
+        transform: translate(-50%, -50%) rotate(-10deg)
+    
+    &-button-next
+      top: 35%
+      right: 12%
+
+    &-button-prev
+      bottom: 25%
+      left: 12%
+
+      svg
+        transform: translate(-50%, -50%) rotate(170deg)
+
+/* forms */
+.forms
+  position: relative
+  padding-top: 200px
+  padding-bottom: 150px
+  color: #ffffff
+  background-color: #79aeb8 
+  background-image: url(../img/flowers-bg.png)
+  background-repeat: no-repeat
+  background-position: center bottom
+  background-size: 1200px
+  background-attachment: fixed
+  clip-path: polygon(0% 250px, 100% 0, 100% calc(100% - 250px), 0 100%)
+
+  &__title
+    margin-bottom: 15px
+    font-family: $font-accent
+    font-size: 48px
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+    
+  &__subtitle
+    margin-bottom: 20px
+    font-size: 24px
+    font-weight: 900
+    text-transform: uppercase
+    text-align: center
+
+    &_accent
+      font-size: 28px
+
+/* form */
+.form
+
+  &__title
+    font-size: 18px
+    font-weight: 900
+    color: $text
+    text-transform: uppercase
+    text-align: center
+
+  &__wrap
+    display: flex
+    flex-direction: column
+    width: 370px
+    margin: 50px auto
+
+    &_modal
+      width: 380px
+
+  &__field
+    width: 100%
+    margin-bottom: 15px
+    padding: 28px 30px
+    font-size: 20px
+    color: $text
+    border: none
+    border-radius: 40px
+
+  &__btn-wrap
+    width: 80%
+    margin-top: 15px
+    margin-bottom: 30px
+
+    &::before
+      box-shadow: 0 10px 30px 3px rgba(0,0,0,0.4)
+    
+  &__checkbox
+    position: relative
+    width: 88%
+    margin-left: auto
+    font-size: 16px
+    color: #ffffff
+    line-height: 1.1
+    cursor: pointer
+
+    a
+      color: #ffffff
+      transition: $slowdown
+      text-decoration: none
+
+      &:hover
+        color: darken(#ffffff, 10%)
+        text-decoration: underline
+
+    &-default
+      display: none
+
+      &:checked + .form__checkbox-new::after
+        background-image: url(../img/check.svg)
+      
+    &-new
+      position: absolute
+      left: -50px
+      top: 50%
+      width: 30px
+      height: 30px
+      margin-right: 9px
+      border-radius: 4px
+      border: 2px solid #ffffff
+      transform: translateY(-50%)
+      
+      &::after
+        content: ''
+        position: absolute
+        left: 75%
+        top: 40%
+        display: block
+        width: 35px
+        height: 35px
+        transform: translate(-50%, -50%)
+
+    &_modal
+      color: $text
+      a
+        color: $text
+      .form__checkbox-new
+        border: 2px solid #ffffff
+
+/* contraindications */
+.contraindications
+  margin-top: -50px
+  margin-bottom: -100px
+
+  &__list
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 45px 0
+    text-align: center
+
+  &__item
+    padding-left: 10px
+    line-height: 1.6
+    
+    span
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        left: -10px
+        top: 8px
+        padding-right: 4px
+        width: 5px
+        height: 5px
+        background-color: $accent
+        border-radius: 50%
+
+
+/* addresses */
+.addresses
+  padding: 250px 0
+  background-color: #ffebf3
+  clip-path: polygon(0% 250px, 100% 0, 100% calc(100% - 250px), 0 100%)
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 70px
+
+  &__item
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 30px
+    padding-top: 40px
+    font-weight: 700
+    text-align: center
+
+    svg
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      width: 25px
+      height: 25px
+      fill: $accent
+      transform: translateX(-50%)
+
+  &__metro
+    color: $accent
+
+  &__description
+    color: $special
+
+
+/* footer */
+.footer
+  margin-top: -70px
+  padding-bottom: 60px
+
+  &__wrap
+    font-size: 16px
+    color: #626262
+    text-align: center
+    p
+      margin-bottom: 0
+      line-height: 1.2
+    a
+      color: #626262
+      transition: $slowdown
+      text-decoration: none
+
+      &:hover
+        color: darken(#626262, 30%)
+        text-decoration: underline
+
+
+/* section modal */
+.section-modal
+  
+.overlay
+  display: block
+  position: fixed
+  top: 50%
+  left: 50%
+  z-index: 200
+  width: 100vw
+  height: 100vh
+  background-color: rgba(#c7d7ec, 0.9)
+  transform: translate(-50%, -50%)
+
+.modal
+
+  &__close
+    position: fixed
+    top: 30px
+    right: 30px
+    z-index: 301
+    width: 30px
+    height: 30px
+    cursor: pointer
+
+    svg
+      fill: #5b5e60
+      width: 30px
+      height: 30px
+  
+  &__wrap
+    position: fixed
+    top: 50%
+    left: 50%
+    z-index: 300
+    width: 510px
+    padding: 50px
+    padding-bottom: 30px
+    transform: translate(-50%, -50%)
+
+  &__title
+    margin-bottom: 10px
+    font-family: $font-default
+    font-size: 18px
+    font-weight: 900
+    color: $text
+    text-align: center
+    text-transform: uppercase
+
+.hidden
+  display: none
+
+@import "media" // Always at the end

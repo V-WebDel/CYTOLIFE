@@ -1,0 +1,692 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@media screen and (max-width: 1200px)
+  /* grids */
+  .container
+    width: 960px 
+  
+  /* wrappers */
+  .wrapper-top
+    &__image
+      &_woman
+        width: 780px
+      &_flowers
+        bottom: -50%
+        transform: translateX(-5%) scale(0.8)
+    &__circle
+      height: 70px
+      width: 70px
+
+  /* header */
+  .header
+    &__line
+      min-height: 110px
+
+  /* top */
+  .top
+    &__wrap
+      margin-top: 20px
+
+  /* promo */
+  .promo
+    &__image
+      &_left
+        width: 300px
+
+    &__price
+      font-size: 20px
+
+  /* set */
+  .set
+    padding-top: 240px
+
+    &__bg-img
+      right: 30%
+      top: -40%
+      width: 60%
+      height: 60%
+
+    &__item
+      width: 220px
+
+  /* signs */
+  .signs
+    padding-top: 220px
+    background-size: 1000px
+
+  /* sign-up */
+  .sign-up
+    &__price
+      font-size: 22px
+
+  /* specialists */
+  .specialists
+    .swiper
+      &-wrapper
+        margin-bottom: 40px
+        padding-bottom: 30px
+
+      &-button-next, &-button-prev
+        display: block
+
+  /* centre */
+  .centre
+    &__bg-img
+      left: 40%
+      width: 60%
+      height: 60%
+
+  /* reviews */
+  .reviews
+    &__item
+      width: 640px
+      transform: rotate(-12deg)
+
+    &__inner
+      display: flex
+      min-height: 100%
+      transform: rotate(12deg)
+
+    .swiper
+      &-button-next
+        top: 30%
+        right: 10%
+
+      &-button-prev
+        bottom: 25%
+        left: 10%
+
+  /* forms */
+  .forms
+    background-size: 1000px
+    
+
+// ≥992px
+@media screen and (max-width: 992px)
+  .btn-wrap
+    width: 270px
+
+  .title-text
+    font-size: 26px
+
+    &__number
+      font-size: 180px
+
+  /* grids */
+  .container
+    width: 720px
+
+  /* wrappers */
+  .wrapper-top
+    &__image
+      &_woman
+        width: 700px
+      &_flowers
+        bottom: -40%
+
+    &__circle
+      height: 50px
+      width: 50px
+      &_1
+        right: 5%
+        bottom: 40%
+      &_2
+        right: 45%
+        bottom: 15%
+
+  /* header */
+  .header
+    &__line
+      min-height: 90px
+
+  /* top */
+  .top
+    &__wrap
+      margin-top: 20px
+    &__subtitle
+      font-size: 16px
+      line-height: 1.2
+    &__title
+      font-size: 30px
+    &__price
+      font-size: 22px
+
+  /* promo */
+  .promo
+    &::before
+      height: 160%
+      clip-path: polygon(0% 15%, 100% 0, 100% 85%, 0 100%)
+    
+    &__wrap
+      &_left
+        width: 40%
+      &_right
+        width: 60%
+        padding-left: 20px
+        padding-right: 0
+
+    &__image
+      &_left
+        top: 100px
+        width: 250px
+
+    &__number
+      font-size: 180px
+    
+  /* set */
+  .set
+    padding-top: 180px
+
+    &__bg-img
+      right: 20%
+      top: -35%
+      width: 50%
+      height: 50%
+
+    &__list
+      flex-direction: column
+      align-items: center
+      margin-top: 80px
+
+    &__item
+      width: 300px
+      margin-bottom: 30px
+
+      &:nth-child(2), &:nth-child(3), &:nth-child(4)
+        margin-top: 0
+
+  /* signs */
+  .signs 
+    margin-top: 0
+    padding-top: 160px
+    background-size: 800px
+    clip-path: polygon(0% 0%, 100% 150px, 100% 100%, 0 calc(100% - 150px))
+
+  /* sign-up */
+  .sign-up
+    margin-top: 0
+
+  /* centre */
+  .centre
+    &__bg-img
+      left: 35%
+
+  /* reviews */
+  .reviews
+    &__item
+      width: 520px
+      border: 2px solid #ffebf3
+      transform: rotate(-10deg)
+
+    &__inner
+      transform: rotate(10deg)
+    
+    &__text
+      font-size: 16px
+
+    .swiper
+      &-button-next
+        top: 40%
+        right: 3%
+
+      &-button-prev
+        bottom: 35%
+        left: 3%
+
+  /* forms */
+  .forms
+    padding-top: 150px
+    padding-bottom: 120px
+    clip-path: polygon(0% 150px, 100% 0, 100% calc(100% - 150px), 0 100%)
+
+  /* contraindications */
+  .contraindications
+    margin-top: 0
+    margin-bottom: -50px
+
+  /* addresses */
+  .addresses
+    padding: 200px 0
+    clip-path: polygon(0% 150px, 100% 0, 100% calc(100% - 150px), 0 100%)
+
+    &__list
+      justify-content: center
+      margin-top: 30px
+
+    &__item
+      width: 220px
+      margin: 20px
+      margin-bottom: 0
+
+  /* footer */
+  .footer
+    margin-top: -2px
+
+
+// ≥768px
+@media screen and (max-width: 768px)
+  .title-text
+    font-size: 24px
+
+  /* grids */
+  .container
+    width: 540px
+
+  /* wrappers */
+  .wrapper-top
+    &__image
+      &_woman
+        width: 550px
+        transform: translateX(50%)
+      &_flowers
+        display: none
+
+    &__circle
+      &_1
+        right: 15%
+        bottom: 20%
+      &_2
+        right: 80%
+        bottom: 15%
+
+  /* header */
+  .header
+    &__line
+      width: 100%
+
+  /* top */
+  .top
+    &__wrap
+      width: 100%
+      margin-top: 0
+      margin-bottom: 300px
+  
+    &__title
+      font-size: 26px
+
+    &__btn-wrap
+      margin-bottom: 15px
+
+  /* promo */
+  .promo
+    margin-top: -70px
+
+    &::before
+      height: 140%
+      clip-path: polygon(0% 10%, 100% 0, 100% 90%, 0 100%)
+
+    &__wrap
+      text-align: center
+      &_left
+        width: 100%
+      &_right
+        width: 100%
+        padding-left: 0
+
+    &__row
+      display: flex
+      flex-wrap: wrap
+      flex-direction: column-revers
+
+    &__image
+      &_left
+        display: none
+      &_right
+        display: block
+        width: 250px
+        margin: 0 auto
+
+    &__text
+      font-size: 16px
+      br:nth-child(4)
+        display: none
+
+    &__number
+      left: 50%
+      transform: translate(-50%, -50%)
+
+    &__title
+      font-size: 22px
+
+    &__price
+      margin-top: -120px
+      font-size: 18px
+
+    &__btn-wrap
+      margin: 0 auto
+      
+  /* set */
+  .set
+    &__bg-img
+      right: 20%
+      top: -70%
+      width: 50%
+      height: 50%
+
+  /* signs */
+  .signs
+    padding-top: 130px
+    padding-bottom: 90px
+    clip-path: polygon(0% 0%, 100% 100px, 100% 100%, 0 calc(100% - 100px))
+
+    &__list
+      margin-top: 90px
+      
+    &__item
+      margin-bottom: 60px
+
+  /* sign-up */
+  .sign-up
+    &__text
+      font-size: 24px
+
+  /* specialists */
+  .specialists
+    .title-text
+      br
+        display: none
+
+  /* centre */  
+  .centre
+    padding-bottom: 80px
+
+    &__bg-img
+      bottom: -40%
+
+    &__item
+      font-size: 15px
+
+    &__btn-wrap
+      bottom: -100px
+
+  /* reviews */
+  .reviews
+    margin-bottom: -80px
+
+    &__item
+      width: 330px
+      min-height: 400px
+      padding: 40px 50px
+      transform: rotate(-8deg)
+
+    &__inner
+      flex-direction: column
+      align-items: flex-end
+      transform: rotate(8deg)
+
+    &__image
+      width: 110px
+      height: 110px
+
+    &__content
+      width: 100%
+      margin-left: 40px
+
+    .swiper
+      &-button-next
+        top: auto
+        bottom: 20%
+        right: 0%
+        svg
+          transform: translate(-50%, -50%) rotate(0deg)
+
+      &-button-prev
+        display: none
+
+  /* forms */
+  .forms
+    padding-top: 100px
+    padding-bottom: 80px
+    clip-path: polygon(0% 100px, 100% 0, 100% calc(100% - 100px), 0 100%)
+
+    &__title
+      font-size: 36px
+      line-height: 1.2
+
+    &__subtitle
+      font-size: 18px
+      line-height: 1.2
+
+      &_accent
+        font-size: 20px
+
+  /* form */
+  .form
+    &__wrap
+      width: 320px
+      margin: 20px auto
+
+    &__field
+      padding: 25px 30px
+
+    &__btn-wrap
+      margin-top: 0
+
+    &__checkbox
+      width: 75%
+
+
+  /* contraindications */
+  .contraindications
+    &__item
+      margin-bottom: 12px
+      line-height: 1.2
+
+  /* addresses */
+  .addresses
+    padding: 100px 0
+    clip-path: polygon(0% 100px, 100% 0, 100% calc(100% - 100px), 0 100%)
+
+    &__list
+      align-items: center
+      flex-direction: column
+    
+// ≥576px
+@media screen and (max-width: 576px)
+  /* grids */
+  .container
+    width: 100%
+    padding: 0 10px
+  
+  /* top */
+  .top
+    &__title
+      font-size: 24px
+  
+    &__text
+      font-size: 14px
+
+  /* promo */
+  .promo
+    
+    &::before
+      clip-path: polygon(0% 8%, 100% 0, 100% 92%, 0 100%)
+
+    &__wrap
+      &_right
+        margin-top: -40px
+
+    &__title
+      font-size: 21px
+
+  /* set */
+  .set
+    &__list
+      margin-top: 30px
+
+  /* signs */
+  .signs
+    padding-top: 80px
+    padding-bottom: 60px
+    clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0 calc(100% - 50px))
+
+    &__list
+      margin-top: 50px
+
+    &__item
+      display: flex
+      align-items: center
+      min-height: 105px
+      margin: 10px
+      margin-top: 0
+      margin-left: 50px
+      padding: 30px
+      padding-left: 55px
+
+    &__number
+      top: 50%
+      left: -32px
+      width: 70px
+      height: 70px
+      transform: translateY(-50%)
+
+    &__title
+      text-align: left
+
+  /* sign-up */
+  .sign-up
+    margin-top: 20px
+    &__price
+      br
+        display: none
+  /* specialists */
+  .specialists
+    padding-top: 80px
+
+    .swiper
+      &-container
+        padding-top: 40px
+
+  /* centre */
+  .centre
+    .title-text
+      margin: 0 20px
+
+    &__wrap
+      width: 90%
+      padding: 50px 15px
+      padding-bottom: 20px
+    
+    &__list
+      margin-top: 30px
+
+  /* reviews */
+  .reviews
+    padding-top: 120px
+
+    &__item
+      width: 300px
+      
+      margin-top: 60px
+      padding: 30px
+      border: 2px solid #ffebf3
+      border-left: none
+      border-right: none
+
+    &__image
+      box-shadow: none
+
+    .swiper
+      &-button-next
+        top: auto
+        bottom: 14%
+        right: 10%
+
+  /* forms */
+  .forms
+    padding-top: 50px
+    padding-bottom: 50px
+    clip-path: polygon(0% 50px, 100% 0, 100% calc(100% - 50px), 0 100%)
+
+    &__title
+      line-height: 1
+
+    &__subtitle
+      margin-bottom: 25px
+      font-weight: 700
+      line-height: 1
+
+  /* form */
+  .form
+    &__wrap
+      width: 290px
+      &_modal
+        width: 260px
+        margin: 10px auto
+
+    &__btn-wrap
+      margin-bottom: 20px
+
+  /* contraindications */
+  .contraindications
+    margin-top: 20px
+    margin-bottom: -40px
+
+    .title-text
+      text-transform: none
+
+    &__list
+      padding-top: 20px
+
+  /* addresses */
+  .addresses
+    padding: 80px 0
+    clip-path: polygon(0% 50px, 100% 0, 100% calc(100% - 50px), 0 100%)
+
+    .title-text
+      text-transform: none
+
+    &__list
+      margin-top: 20px
+
+    &__item
+      padding-top: 30px
+
+  /* footer */
+  .footer
+    margin-top: 20px
+
+    &__wrap
+      font-size: 14px
+
+  /* section modal */
+  .modal
+    &__close
+      top: 20px
+      right: 20px
+      width: 20px
+      height: 20px
+
+      svg
+        width: 20px
+        height: 20px
+
+    &__wrap
+      width: 300px
+      padding: 20px 10px
+
+    &__title
+      font-size: 16px
+
+// ≥360px
+@media screen and (max-width: 360px)
+  /* reviews */
+  .reviews
+    &__item
+      width: 320px
+      padding: 20px
+      padding-left: 10px
+
+    &__inner
+      padding-left: 0
+      padding-right: 40px
+
+    .swiper
+      &-button-next
+        top: auto
+        bottom: 16%
+        right: 10%
+    
